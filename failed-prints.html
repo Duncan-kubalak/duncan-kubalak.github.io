@@ -1,16 +1,41 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
+  <meta charset="UTF-8">
   <title>Failed Prints</title>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  
+      <style>
+      .text {
+  font-family: "Share Tech Mono", monospace;
+}
+.number {
+  font-family: "Audiowide", cursive;
+  font-size: 50px;
+}
+
+#button {
+  background-color: #5e5e5e;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background: red;
+  box-shadow: 2px 2px 2px #777;
+}
+    </style> 
 </head>
-
-<body>
-
+  
+<body translate="no" >
   <center>
+
     <div class="text">
       <h1>Tesseract Failed 3D Print Counter</h1>
       <i>Why don't we just Glowforge the whole robot!</i>
@@ -26,13 +51,14 @@
         <input type="button" name="button" value="There goes another one!" id="button" onclick="add();" />
       </form>
     </div>
-  </center>
 
+  </center>
 </body>
   
-<script >    
-var value = 9;
-      
+
+    <script >
+      var value = 9;
+
 function add() {
   value++;
   document.getElementById("field").innerHTML = value;
